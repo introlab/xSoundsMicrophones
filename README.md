@@ -1,5 +1,7 @@
 # xSoundsMicrophones
-Microphones for 8SoundsUSB and 16SoundsUSB
+Microphones for 8SoundsUSB and 16SoundsUSB. 
+
+These microphones and sound cards require the use of "crossover" cables with RJ11, RJ12 or RJ14 connectors. 
 
 
 # Compatibility
