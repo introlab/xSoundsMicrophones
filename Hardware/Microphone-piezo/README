@@ -3,10 +3,10 @@ The reason why these devices often sound tinny is because the piezo sensor prese
 Because the piezo disc has a very high impedance (1 MΩ typical), it should be buffered to avoid possible impedance mismatch with an existing audio system. This circuit acts as a impedance buffer, and some amplification does not hurt as long as it is around 40dB. 
 The best piezoelectric sensors for listening is based on Aluminum Nitride and molybdenum. PZT-5 also known as SensorTech BM500,Channel 5500,Morgan PZT5A1 is widely used.
 
-The opamp is a LME49724 , it should be suitable for this as it has a balanced output.
+The diodes are there to avoid overloading the circuit if it is dropped or bumped in to something hard.
 
 NOAA technical memorandum NMFS 2008NOAA-TM-NMFS-SWFSC-417 also known as
-A guide to constructing hydrophones and hydrophone arrays for monitoring marine mammal vocalizations,
+A guide to constructing hydrophones and hydrophone arrays for monitoringmarine mammal vocalizations,
 describes how to build a single crystal hydrophone.
 
 If the piezo electric crystals are a suitable distance and 45° degrees apart from each other in a flat circular array with 8  piezoelectric sensors,
