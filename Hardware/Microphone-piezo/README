@@ -1,3 +1,5 @@
+A impedance buffer and amplifier for the xSoundsMicrophones project.
+
 The problem with piezoelectric and contact mics is that they are not well matched to typical audio inputs. 
 The reason why these devices often sound tinny is because the piezo sensor presents its signal through a series capacitance which is small, typically 15nF or less. When wired to a normal 50 kilohm line input this forms a 200Hz high-pass filter, which eliminates the bass. 
 Because the piezo disc has a very high impedance (1 MΩ typical), it should be buffered to avoid possible impedance mismatch with an existing audio system. This circuit acts as a impedance buffer, and some amplification does not hurt as long as it is around 40dB. 
@@ -13,7 +15,7 @@ If the piezo electric crystals are a suitable distance and 45° degrees apart fr
 they should be compatible with Manyears or ODAS.
 
 Approximate values for fresh water and seawater, respectively, at surface pressure are 1450 around 1500 m/s.
- The speed of sound in water increases with increasing pressure, temperature and salinity.
+The speed of sound in water increases with increasing pressure, temperature and salinity.
 
 Also, read: https://github.com/Supermagnum/passiveSonar
 
