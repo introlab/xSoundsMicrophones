@@ -4,7 +4,7 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Sheet1-SchDoc"
+Title "High Z amplifier for piezo electric crystal"
 Date "27 07 2020"
 Rev ""
 Comp ""
@@ -147,7 +147,7 @@ $EndComp
 Wire Wire Line
 	4450 4300 3550 4300
 Wire Wire Line
-	3550 4300 3550 4200
+	3550 4300 3550 4250
 Wire Wire Line
 	3550 4400 3550 4300
 Connection ~ 3550 4300
@@ -243,7 +243,7 @@ Wire Wire Line
 	4150 4500 4400 4500
 Connection ~ 4400 4500
 Wire Wire Line
-	2100 4100 2100 4350
+	2100 4100 2100 4250
 Wire Wire Line
 	2650 4200 2350 4200
 Wire Wire Line
@@ -373,7 +373,7 @@ L Connector:Conn_01x01_Female J2
 U 1 1 5F20962C
 P 3550 5650
 F 0 "J2" V 3396 5698 50  0000 L CNN
-F 1 "Conn_01x01_Female" V 3487 5698 50  0000 L CNN
+F 1 "conn to ground" V 3600 5650 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad" H 3550 5650 50  0001 C CNN
 F 3 "~" H 3550 5650 50  0001 C CNN
 	1    3550 5650
@@ -383,8 +383,8 @@ $Comp
 L Connector:Conn_01x01_Female J3
 U 1 1 5F20A546
 P 3750 5650
-F 0 "J3" V 3596 5698 50  0000 L CNN
-F 1 "Conn_01x01_Female" V 3687 5698 50  0000 L CNN
+F 0 "J3" V 3642 5698 50  0000 L CNN
+F 1 "Conn_01x01_Female" V 3687 5698 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad" H 3750 5650 50  0001 C CNN
 F 3 "~" H 3750 5650 50  0001 C CNN
 	1    3750 5650
@@ -394,22 +394,11 @@ $Comp
 L Connector:Conn_01x01_Female J4
 U 1 1 5F20AF03
 P 3900 5650
-F 0 "J4" V 3746 5698 50  0000 L CNN
-F 1 "Conn_01x01_Female" V 3837 5698 50  0000 L CNN
+F 0 "J4" V 3792 5698 50  0000 L CNN
+F 1 "Conn_01x01_Female" V 3837 5698 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad" H 3900 5650 50  0001 C CNN
 F 3 "~" H 3900 5650 50  0001 C CNN
 	1    3900 5650
-	0    1    1    0   
-$EndComp
-$Comp
-L Connector:Conn_01x01_Female J5
-U 1 1 5F20B32F
-P 4050 5650
-F 0 "J5" V 3896 5698 50  0000 L CNN
-F 1 "Conn_01x01_Female" V 3987 5698 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad" H 4050 5650 50  0001 C CNN
-F 3 "~" H 4050 5650 50  0001 C CNN
-	1    4050 5650
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -424,4 +413,26 @@ Wire Wire Line
 	3550 5450 3550 5200
 Connection ~ 3550 5450
 Connection ~ 3550 5200
+$Comp
+L Connector:Conn_01x01_Female J5
+U 1 1 5F20B32F
+P 4050 5650
+F 0 "J5" V 3942 5698 50  0000 L CNN
+F 1 "Conn_01x01_Female" V 3987 5698 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad" H 4050 5650 50  0001 C CNN
+F 3 "~" H 4050 5650 50  0001 C CNN
+	1    4050 5650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3550 4250 3100 4250
+Connection ~ 3550 4250
+Wire Wire Line
+	3550 4250 3550 4200
+Connection ~ 2100 4250
+Wire Wire Line
+	2100 4250 2100 4350
+Connection ~ 3100 4250
+Wire Wire Line
+	3100 4250 2100 4250
 $EndSCHEMATC

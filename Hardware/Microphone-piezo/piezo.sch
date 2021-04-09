@@ -147,8 +147,6 @@ $EndComp
 Wire Wire Line
 	4450 4300 3550 4300
 Wire Wire Line
-	3550 4300 3550 4200
-Wire Wire Line
 	3550 4400 3550 4300
 Connection ~ 3550 4300
 $Comp
@@ -242,8 +240,6 @@ Wire Wire Line
 Wire Wire Line
 	4150 4500 4400 4500
 Connection ~ 4400 4500
-Wire Wire Line
-	2100 4100 2100 4350
 Wire Wire Line
 	2650 4200 2350 4200
 Wire Wire Line
@@ -424,4 +420,24 @@ F 3 "~" H 4050 5650 50  0001 C CNN
 	1    4050 5650
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	2100 4100 2100 4300
+Wire Wire Line
+	3550 4200 3550 4250
+Wire Wire Line
+	3550 4250 3150 4250
+Wire Wire Line
+	3150 4250 3150 4150
+Wire Wire Line
+	3150 4150 2900 4150
+Wire Wire Line
+	2900 4150 2900 4300
+Wire Wire Line
+	2900 4300 2100 4300
+Connection ~ 3550 4250
+Wire Wire Line
+	3550 4250 3550 4300
+Connection ~ 2100 4300
+Wire Wire Line
+	2100 4300 2100 4350
 $EndSCHEMATC
