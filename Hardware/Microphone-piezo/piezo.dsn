@@ -1,9 +1,9 @@
-(pcb /home/haaken/Nedlastinger/piezo/piezo.dsn
+(pcb "/home/haaken/Nedlastinger/xSoundsMicrophones-master/xSoundsMicrophones-master/Hardware/Microphone-piezo/piezo.dsn"
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
     (host_cad "KiCad's Pcbnew")
-    (host_version "5.1.6-c6e7f7d~87~ubuntu20.04.1")
+    (host_version "5.1.9")
   )
   (resolution um 10)
   (unit um)
@@ -24,6 +24,12 @@
       (path pcb 0  149500 -149500  98000 -149500  98000 -117500  149500 -117500
             149500 -149500)
     )
+    (plane GND (polygon F.Cu 0  149500 -149500  98000 -149500  98000 -117500  149500 -117500
+            149500 -149500))
+    (plane GND (polygon B.Cu 0  149500 -149500  98000 -149500  98000 -117500  149500 -117500
+            149500 -149500))
+    (plane GND (polygon B.Cu 0  149500 -149500  98000 -149500  98000 -117500  149500 -117500
+            149500 -149500))
     (via "Via[0-1]_800:400_um")
     (rule
       (width 250)
@@ -41,14 +47,11 @@
       (place C3 118000 -123300 front 90 (PN 47uF))
       (place C4 132500 -136300 front 270 (PN 10uF))
     )
-    (component "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-      (place U1 122475 -132905 front 0 (PN NE5534))
-    )
     (component "Crystal:Crystal_HC18-U_Vertical"
       (place X1 105000 -134500 front 90 (PN Piezo))
     )
     (component Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder
-      (place R4 121875 -128000 front 0 (PN 1K))
+      (place R4 119625 -136000 front 0 (PN 1K))
       (place R3 111500 -129125 front 90 (PN 56K))
       (place R6 126500 -139000 front 180 (PN 470))
     )
@@ -68,12 +71,18 @@
       (place D2 115500 -130850 front 90 (PN "1N4148W "))
     )
     (component MountingHole:MountingHole_2.2mm_M2_DIN965_Pad
-      (place J2 145500 -121500 front 0 (PN Conn_01x01_Female))
+      (place J2 145500 -121500 front 0 (PN "conn to ground"))
       (place J4 102500 -121500 front 0 (PN Conn_01x01_Female))
     )
     (component MountingHole:MountingHole_2.2mm_M2_DIN965_Pad::1
       (place J3 145500 -145000 front 0 (PN Conn_01x01_Female))
       (place J5 102000 -145500 front 0 (PN Conn_01x01_Female))
+    )
+    (component Capacitor_SMD:CP_Elec_5x5.9::2
+      (place C5 129300 -144000 front 180 (PN 0.1uF))
+    )
+    (component "tastatur:PSOIC-8"
+      (place U1 124500 -133500 front 0 (PN LME49724))
     )
   )
   (library
@@ -162,29 +171,6 @@
       (outline (path signal 50  -3950 -1050  -2900 -1050))
       (pin RoundRect[T]Pad_3000x1600_250.951_um 1 -2200 0)
       (pin RoundRect[T]Pad_3000x1600_250.951_um 2 2200 0)
-    )
-    (image "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-      (outline (path signal 120  0 -2560  1950 -2560))
-      (outline (path signal 120  0 -2560  -1950 -2560))
-      (outline (path signal 120  0 2560  1950 2560))
-      (outline (path signal 120  0 2560  -3450 2560))
-      (outline (path signal 100  -975 2450  1950 2450))
-      (outline (path signal 100  1950 2450  1950 -2450))
-      (outline (path signal 100  1950 -2450  -1950 -2450))
-      (outline (path signal 100  -1950 -2450  -1950 1475))
-      (outline (path signal 100  -1950 1475  -975 2450))
-      (outline (path signal 50  -3700 2700  -3700 -2700))
-      (outline (path signal 50  -3700 -2700  3700 -2700))
-      (outline (path signal 50  3700 -2700  3700 2700))
-      (outline (path signal 50  3700 2700  -3700 2700))
-      (pin RoundRect[T]Pad_1950x600_150.571_um 1 -2475 1905)
-      (pin RoundRect[T]Pad_1950x600_150.571_um 2 -2475 635)
-      (pin RoundRect[T]Pad_1950x600_150.571_um 3 -2475 -635)
-      (pin RoundRect[T]Pad_1950x600_150.571_um 4 -2475 -1905)
-      (pin RoundRect[T]Pad_1950x600_150.571_um 5 2475 -1905)
-      (pin RoundRect[T]Pad_1950x600_150.571_um 6 2475 -635)
-      (pin RoundRect[T]Pad_1950x600_150.571_um 7 2475 635)
-      (pin RoundRect[T]Pad_1950x600_150.571_um 8 2475 1905)
     )
     (image "Crystal:Crystal_HC18-U_Vertical"
       (outline (path signal 100  -675 2325  5575 2325))
@@ -333,6 +319,69 @@
             1598.38 1027.22  1823.04 535.292  1900 0))
       (pin Round[A]Pad_3800_um 1 0 0)
     )
+    (image Capacitor_SMD:CP_Elec_5x5.9::2
+      (outline (path signal 50  -3950 -1050  -2900 -1050))
+      (outline (path signal 50  -3950 1050  -3950 -1050))
+      (outline (path signal 50  -2900 1050  -3950 1050))
+      (outline (path signal 50  -2900 -1050  -2900 -1750))
+      (outline (path signal 50  -2900 1750  -2900 1050))
+      (outline (path signal 50  -2900 1750  -1750 2900))
+      (outline (path signal 50  -2900 -1750  -1750 -2900))
+      (outline (path signal 50  -1750 2900  2900 2900))
+      (outline (path signal 50  -1750 -2900  2900 -2900))
+      (outline (path signal 50  2900 -1050  2900 -2900))
+      (outline (path signal 50  3950 -1050  2900 -1050))
+      (outline (path signal 50  3950 1050  3950 -1050))
+      (outline (path signal 50  2900 1050  3950 1050))
+      (outline (path signal 50  2900 2900  2900 1050))
+      (outline (path signal 120  -3312.5 1997.5  -3312.5 1372.5))
+      (outline (path signal 120  -3625 1685  -3000 1685))
+      (outline (path signal 120  -2760 -1695.56  -1695.56 -2760))
+      (outline (path signal 120  -2760 1695.56  -1695.56 2760))
+      (outline (path signal 120  -2760 1695.56  -2760 1060))
+      (outline (path signal 120  -2760 -1695.56  -2760 -1060))
+      (outline (path signal 120  -1695.56 -2760  2760 -2760))
+      (outline (path signal 120  -1695.56 2760  2760 2760))
+      (outline (path signal 120  2760 2760  2760 1060))
+      (outline (path signal 120  2760 -2760  2760 -1060))
+      (outline (path signal 100  -1783.96 1450  -1783.96 950))
+      (outline (path signal 100  -2033.96 1200  -1533.96 1200))
+      (outline (path signal 100  -2650 -1650  -1650 -2650))
+      (outline (path signal 100  -2650 1650  -1650 2650))
+      (outline (path signal 100  -2650 1650  -2650 -1650))
+      (outline (path signal 100  -1650 -2650  2650 -2650))
+      (outline (path signal 100  -1650 2650  2650 2650))
+      (outline (path signal 100  2650 2650  2650 -2650))
+      (outline (path signal 100  2500 0  2421.46 -621.725  2190.77 -1204.38  1822.42 -1711.37
+            1339.57 -2110.82  772.542 -2377.64  156.976 -2495.07  -468.453 -2455.72
+            -1064.45 -2262.07  -1593.56 -1926.28  -2022.54 -1469.46  -2324.44 -920.311
+            -2480.29 -313.333  -2480.29 313.333  -2324.44 920.311  -2022.54 1469.46
+            -1593.56 1926.28  -1064.45 2262.07  -468.453 2455.72  156.976 2495.07
+            772.542 2377.64  1339.57 2110.82  1822.42 1711.37  2190.77 1204.38
+            2421.46 621.725  2500 0))
+      (pin RoundRect[T]Pad_3000x1600_250.951_um 1 -2200 0)
+      (pin RoundRect[T]Pad_3000x1600_250.951_um 2 2200 0)
+    )
+    (image "tastatur:PSOIC-8"
+      (outline (path signal 50  -2460 -3720  -2460 3720))
+      (outline (path signal 50  2460 -3720  -2460 -3720))
+      (outline (path signal 50  2460 3720  2460 -3720))
+      (outline (path signal 50  -2460 3720  2460 3720))
+      (outline (path signal 120  2705 -3975  -1905 -3975))
+      (outline (path signal 120  2705 3975  2705 -3975))
+      (outline (path signal 120  -2705 3975  2705 3975))
+      (outline (path signal 120  -2705 -3175  -2705 3975))
+      (outline (path signal 120  -1905 -3975  -2705 -3175))
+      (pin Rect[T]Pad_600x1550_um 8 -1905 2700)
+      (pin Rect[T]Pad_600x1550_um 1 -1905 -2700)
+      (pin Rect[T]Pad_600x1550_um 7 -635 2700)
+      (pin Rect[T]Pad_600x1550_um 2 -635 -2700)
+      (pin Rect[T]Pad_600x1550_um 6 635 2700)
+      (pin Rect[T]Pad_600x1550_um 3 635 -2700)
+      (pin Rect[T]Pad_600x1550_um 5 1905 2700)
+      (pin Rect[T]Pad_600x1550_um 4 1905 -2700)
+      (pin Rect[T]Pad_4900x2950_um 9 0 0)
+    )
     (padstack Round[A]Pad_1500_um
       (shape (circle F.Cu 1500))
       (shape (circle B.Cu 1500))
@@ -371,18 +420,12 @@
             328.898 472.282))
       (attach off)
     )
-    (padstack RoundRect[T]Pad_1950x600_150.571_um
-      (shape (polygon F.Cu 0  851.146 298.283  876.498 291.49  900.285 280.398  921.785 265.344
-            940.344 246.785  955.398 225.286  966.49 201.498  973.283 176.146
-            975.571 150  975.571 -150  973.283 -176.146  966.49 -201.498
-            955.398 -225.285  940.344 -246.785  921.785 -265.344  900.286 -280.398
-            876.498 -291.49  851.146 -298.283  825 -300.571  -825 -300.571
-            -851.146 -298.283  -876.498 -291.49  -900.285 -280.398  -921.785 -265.344
-            -940.344 -246.785  -955.398 -225.286  -966.49 -201.498  -973.283 -176.146
-            -975.571 -150  -975.571 150  -973.283 176.146  -966.49 201.498
-            -955.398 225.285  -940.344 246.785  -921.785 265.344  -900.286 280.398
-            -876.498 291.49  -851.146 298.283  -825 300.571  825 300.571
-            851.146 298.283))
+    (padstack Rect[T]Pad_4900x2950_um
+      (shape (rect F.Cu -2450 -1475 2450 1475))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_600x1550_um
+      (shape (rect F.Cu -300 -775 300 775))
       (attach off)
     )
     (padstack Rect[T]Pad_900x1200_um
@@ -402,13 +445,13 @@
   )
   (network
     (net GND
-      (pins C1-2 C2-2 C3-1 U1-4 X1-2 R3-2 R7-1 J1-2 D2-2 J2-1 J3-1 J4-1 J5-1)
+      (pins C1-2 C2-2 C3-1 X1-2 R3-2 R7-1 J1-2 D2-2 J2-1 J3-1 J4-1 J5-1 C5-2 U1-6)
     )
     (net "Net-(C1-Pad1)"
       (pins C1-1 R1-2 R2-2 R3-1)
     )
     (net VCC
-      (pins C2-1 U1-7 R2-1 J1-4 D1-1)
+      (pins C2-1 R2-1 J1-4 D1-1 U1-7 U1-3)
     )
     (net "Net-(C4-Pad1)"
       (pins C4-1 R7-2 J1-1)
@@ -417,24 +460,29 @@
       (pins C4-2 R6-1)
     )
     (net "Net-(D1-Pad2)"
-      (pins U1-3 D1-2 D2-1)
-    )
-    (net "Net-(R1-Pad1)"
-      (pins X1-1 R1-1)
+      (pins X1-1 R1-1 D1-2 D2-1 U1-8)
     )
     (net "Net-(C3-Pad2)"
       (pins C3-2 R4-1)
     )
     (net "Net-(R4-Pad2)"
-      (pins U1-2 R4-2 R5-2)
+      (pins R4-2 R5-2 U1-1)
     )
     (net "Net-(R5-Pad1)"
-      (pins U1-6 R5-1 R6-2)
+      (pins R5-1 R6-2 U1-4)
     )
-    (class kicad_default "" GND "Net-(1K1-Pad1)" "Net-(1K1-Pad2)" "Net-(C1-Pad1)"
-      "Net-(C3-Pad2)" "Net-(C4-Pad1)" "Net-(C4-Pad2)" "Net-(D1-Pad2)" "Net-(J1-Pad3)"
-      "Net-(R1-Pad1)" "Net-(R4-Pad1)" "Net-(R4-Pad2)" "Net-(R5-Pad1)" "Net-(U1-Pad1)"
-      "Net-(U1-Pad5)" "Net-(U1-Pad8)" VCC
+    (net "Net-(J1-Pad3)"
+      (pins J1-3)
+    )
+    (net "Net-(U1-Pad5)"
+      (pins U1-5)
+    )
+    (net "Net-(C5-Pad1)"
+      (pins C5-1 U1-2)
+    )
+    (class kicad_default "" GND "Net-(C1-Pad1)" "Net-(C3-Pad2)" "Net-(C4-Pad1)"
+      "Net-(C4-Pad2)" "Net-(C5-Pad1)" "Net-(D1-Pad2)" "Net-(J1-Pad3)" "Net-(R4-Pad2)"
+      "Net-(R5-Pad1)" "Net-(U1-Pad1)" "Net-(U1-Pad5)" "Net-(U1-Pad8)" VCC
       (circuit
         (use_via Via[0-1]_800:400_um)
       )

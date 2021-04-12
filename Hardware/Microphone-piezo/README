@@ -8,7 +8,7 @@ The best piezoelectric sensors for listening is based on Aluminum Nitride and mo
 The diodes are there to avoid overloading the circuit if it is dropped or bumped in to something hard.
 
 NOAA technical memorandum NMFS 2008NOAA-TM-NMFS-SWFSC-417 also known as
-A guide to constructing hydrophones and hydrophone arrays for monitoring marine mammal vocalizations,
+A guide to constructing hydrophones and hydrophone arrays for monitoringmarine mammal vocalizations,
 describes how to build a single crystal hydrophone.
 
 If the piezo electric crystals are a suitable distance and 45° degrees apart from each other in a flat circular array with 8  piezoelectric sensors,
@@ -20,3 +20,5 @@ The speed of sound in water increases with increasing pressure, temperature and 
 Also, read: https://github.com/Supermagnum/passiveSonar
 
 
+PCB:
+https://oshpark.com/shared_projects/I4DribPA
