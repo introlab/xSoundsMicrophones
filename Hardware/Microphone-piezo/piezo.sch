@@ -444,8 +444,6 @@ Wire Wire Line
 	5950 5200 5800 5200
 Wire Wire Line
 	5400 4850 5250 4850
-Wire Wire Line
-	5950 4400 5950 5200
 Connection ~ 4700 5050
 Wire Wire Line
 	4800 4750 4700 4750
@@ -466,7 +464,6 @@ Wire Wire Line
 	5550 4400 5650 4400
 Wire Wire Line
 	5950 4400 5950 4150
-Connection ~ 5950 4400
 Wire Wire Line
 	6950 4500 6950 4450
 $Comp
@@ -498,7 +495,7 @@ Wire Wire Line
 Wire Wire Line
 	6350 4600 6300 4600
 Wire Wire Line
-	6000 4600 5550 4600
+	6000 4600 5950 4600
 $Comp
 L Device:R R8
 U 1 1 60781143
@@ -538,4 +535,9 @@ Wire Wire Line
 Connection ~ 4400 4650
 Wire Wire Line
 	4400 4650 4400 4500
+Wire Wire Line
+	5950 5200 5950 4600
+Connection ~ 5950 4600
+Wire Wire Line
+	5950 4600 5550 4600
 $EndSCHEMATC
