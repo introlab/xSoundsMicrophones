@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name piezo-rescue)(type Legacy)(uri ${KIPRJMOD}/piezo-rescue.lib)(options "")(descr ""))
+)
